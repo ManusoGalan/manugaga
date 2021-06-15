@@ -4,11 +4,10 @@ import styles from '../styles/Home.module.css'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
 export async function getStaticProps(){
-  const posts = getAllFilesFrontMatter('');
-  console.log(posts);
-
+  const posts = getAllFilesFrontMatter('blog');
+  
   return {
-    props: posts
+    props: { posts }
   };
 }
 
