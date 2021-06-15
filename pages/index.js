@@ -1,8 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { getAllFilesFrontMatter } from '@/lib/mdx'
 
-export default function Home() {
+export async function getStaticProps(){
+  const posts = getAllFilesFrontMatter('');
+  console.log(posts);
+
+  return {
+    props: posts
+  };
+}
+
+export default function Home({ posts }) {
   return (
     <div className={styles.container}>
       <Head>
