@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
 export async function getStaticProps(){
